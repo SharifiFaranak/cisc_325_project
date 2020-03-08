@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".statusSelectionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/change_status"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/initial_default_status" />
+
+        <Button
+            android:id="@+id/confirm_status_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="update"
+            android:onClick="confirmStatusChange"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/status_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/StatusList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I'm at the gym"
+                android:onClick="replaceStatusText"/>
+
+            <TextView
+                style="@style/StatusList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I'm studying"
+                android:onClick="replaceStatusText" />
+
+            <TextView
+                style="@style/StatusList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I'm partying"
+                android:onClick="replaceStatusText" />
+
+            <TextView
+                style="@style/StatusList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Looking to join an event"
+                android:onClick="replaceStatusText" />
+
+            <TextView
+                style="@style/StatusList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I'm hanging out with friends"
+                android:onClick="replaceStatusText" />
+
+            <TextView
+                style="@style/StatusList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I'm unavailable"
+                android:onClick="replaceStatusText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/add_new_preset_status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Type to add a new preset" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blue_rounded_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:textColor="@android:color/white"
+                android:text="Add" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
