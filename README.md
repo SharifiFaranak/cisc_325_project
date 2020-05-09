@@ -1,3 +1,4 @@
+test
 # CISC 365 Project
 
 This project aims to create a prototype for an android app that provides an easy interface for first-year university students to plan time with friends and find & join activities where they could potentially meet new friends.
